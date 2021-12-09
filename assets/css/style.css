@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@400;600;700&display=swap');
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+body {
+    overflow: hidden;
+    box-sizing: border-box;
+    height: 100vh;
+    width: 100%;
+    background: #f5f5f5;
+    font-family: 'Readex Pro', sans-serif;
+}
+
+header {
+    height: 60px;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header nav {
+    max-width: 1260px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    color: red;
+
+}
+
+header nav .hamburger {
+    display: flex;
+    align-items: center;
+}
+
+header nav .hamburger ion-icon {
+    margin-right: 10px;
+    font-size: 26px;
+}
+
+header nav .hamburger span {
+    margin-right: 10px;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+header nav h6 {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+main {
+    height: calc(100vh - 60px);
+    max-width: 1260px;
+    margin: 0 auto;
+}
+
+main span {
+    position: absolute;
+    font-size: 350px;
+    line-height: 350px;
+    letter-spacing: 10px;
+    font-weight: 700;
+    top: 20px;
+
+    color: #fff;
+}
+
+main article {
+    position: absolute;
+    width: 300px;
+}
+
+main article::before {
+    content: url(../images/arrow.svg);
+    position: absolute;
+    top: 25px;
+    left: -145px;
+}
+
+main article h2 {
+    font-size: 45px;
+    line-height: 110%;
+    font-weight: 600;
+    color: red;
+    margin-bottom: 15px;
+    position: relative;
+    letter-spacing: .7px;
+}
+
+main article p {
+    font-size: 15px;
+    line-height: 180%;
+    font-weight: 400;
+    text-transform: capitalize;
+    letter-spacing: .7px;
+    color: rgb(97, 93, 93);
+}
+
+main .first,
+main .second {
+    height: 50%;
+    width: 100%;
+    position: relative;
+}
+
+main .first span {
+    top: 50%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+}
+
+main .first article {
+    top: 50%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+}
+
+main .second span {
+    top: 50%;
+    left: 65%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+}
+
+main .second article {
+    top: 50%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+}
+
+.cursor {
+    position: absolute;
+    background: #000;
+    cursor: pointer;
+    width: 8px;
+    height: 8px;
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
+    z-index: 1;
+    transition: 0.5s cubic-bezier(0.75, -1.27, 0.3, 2.33) transform, 0.5s cubic-bezier(0.75, -1.27, 0.3, 2.33) transform;
+    -webkit-transition: 0.5s cubic-bezier(0.75, -1.27, 0.3, 2.33) transform, 0.5s cubic-bezier(0.75, -1.27, 0.3, 2.33) transform;
+    -moz-transition: 0.5s cubic-bezier(0.75, -1.27, 0.3, 2.33) transform, 0.5s cubic-bezier(0.75, -1.27, 0.3, 2.33) transform;
+    -ms-transition: 0.5s cubic-bezier(0.75, -1.27, 0.3, 2.33) transform, 0.5s cubic-bezier(0.75, -1.27, 0.3, 2.33) transform;
+    -o-transition: 0.5s cubic-bezier(0.75, -1.27, 0.3, 2.33) transform, 0.5s cubic-bezier(0.75, -1.27, 0.3, 2.33) transform;
+    user-select: none;
+    pointer-events: none;
+    transform: scale(.8);
+    -webkit-transform: scale(.8);
+    -moz-transform: scale(.8);
+    -ms-transform: scale(.8);
+    -o-transform: scale(.8);
+}
+
+.cursor::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    background-image: url(../images/view-project.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
+    opacity: 0;
+}
+
+.cursor.active {
+    opacity: 1;
+    transform: scale(12);
+    -webkit-transform: scale(12);
+    -moz-transform: scale(12);
+    -ms-transform: scale(12);
+    -o-transform: scale(12);
+}
+
+.cursor.active::before {
+    opacity: 1;
+}
+
+.cursor-follower {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: 0.5s cubic-bezier(0.75, -1.27, 0.3, 2.33) transform, 0.5s cubic-bezier(0.75, -1.27, 0.3, 2.33) transform;
+    -webkit-transition: 0.5s cubic-bezier(0.75, -1.27, 0.3, 2.33) transform, 0.5s cubic-bezier(0.75, -1.27, 0.3, 2.33) transform;
+    -moz-transition: 0.5s cubic-bezier(0.75, -1.27, 0.3, 2.33) transform, 0.5s cubic-bezier(0.75, -1.27, 0.3, 2.33) transform;
+    -ms-transition: 0.5s cubic-bezier(0.75, -1.27, 0.3, 2.33) transform, 0.5s cubic-bezier(0.75, -1.27, 0.3, 2.33) transform;
+    -o-transition: 0.5s cubic-bezier(0.75, -1.27, 0.3, 2.33) transform, 0.5s cubic-bezier(0.75, -1.27, 0.3, 2.33) transform;
+    user-select: none;
+    pointer-events: none;
+    transform: translate(4px, 4px);
+    -webkit-transform: translate(4px, 4px);
+    -moz-transform: translate(4px, 4px);
+    -ms-transform: translate(4px, 4px);
+    -o-transform: translate(4px, 4px);
+}
+
+.cursor-follower.active {
+    opacity: 0.3;
+    transform: scale(0);
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    -o-transform: scale(0);
+}
