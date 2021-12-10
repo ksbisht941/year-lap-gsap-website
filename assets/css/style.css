@@ -27,7 +27,7 @@ header {
 }
 
 header nav {
-    max-width: 1260px;
+    max-width: 1200px;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -60,15 +60,16 @@ header nav h6 {
 
 main {
     height: calc(100vh - 60px);
-    max-width: 1260px;
+    max-width: 1200px;
     margin: 0 auto;
+    position: relative;
 }
 
 main span {
     position: absolute;
     font-size: 350px;
     line-height: 350px;
-    letter-spacing: 10px;
+    letter-spacing: 25px;
     font-weight: 700;
     top: 20px;
 
@@ -115,7 +116,7 @@ main .second {
 
 main .first span {
     top: 50%;
-    left: 35%;
+    left: 40%;
     transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);
     -moz-transform: translate(-50%, -50%);
@@ -125,7 +126,7 @@ main .first span {
 
 main .first article {
     top: 50%;
-    left: 80%;
+    left: 85%;
     transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);
     -moz-transform: translate(-50%, -50%);
